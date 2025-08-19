@@ -24,5 +24,13 @@ public class Array {
         {
             System.out.println(val);
         }
+
+        String s = Arrays.toString(arr);
+
+        System.out.println(s);
+
+        // Integer.toString(n) → for a single int
+
+        // Arrays.toString(arr) → for an array of ints (or other types)
     }
 }
