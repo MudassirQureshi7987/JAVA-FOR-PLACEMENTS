@@ -58,5 +58,20 @@ public class Strings {
         {
             System.out.println(parts[i]);
         }
+
+        // Difference between == and equals()
+        // String a = "hello";
+        // String b = "hello";
+        // String c = new String("hello");
+
+        // System.out.println(a == b); // true  ✅ (both point to same string literal in String Pool)
+        // System.out.println(a == c); // false ❌ (c is a new object in heap memory)
+
+        String a = "hello";
+        String b = new String("hello");
+
+        System.out.println(a.equals(b)); // true ✅ (contents are same: "hello")
+        // equals() checks for value equality (contents), while == checks for reference equality (memory address)
+
     }
 }
