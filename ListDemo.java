@@ -1,4 +1,9 @@
-public class List {
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+import java.util.List;
+
+public class ListDemo {
     public static void main(String[] args) {
         // Creating a list using ArrayList
         List<Integer> arrayList = new ArrayList<>();
