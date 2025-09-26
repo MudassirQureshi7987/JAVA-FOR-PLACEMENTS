@@ -29,6 +29,27 @@ public class AccessDemo {
         System.out.println("Default: " + defaultVar);
         System.out.println("Private: " + privateVar);
     }
+
+    public void setter(int val) {
+        privateVar = val;  // ✅ ok
+    }
+
+    public void getter() {
+        System.out.println(privateVar);  // ✅ ok
+    }
+
+    public static void main(String[] args) {
+        AccessDemo obj = new AccessDemo();
+        System.out.println(obj.publicVar);       // ✅ ok
+        System.out.println(obj.protectedVar);    // ✅ ok
+        System.out.println(obj.defaultVar);      // ✅ ok
+        System.out.println(obj.privateVar);      // ✅ ok
+
+        obj.showAccess();  // ✅ ok
+
+        obj.setter(10);    // ✅ ok
+        obj.getter();      // ✅ ok
+    }
 }
 
 // Another class in the same package
@@ -39,6 +60,11 @@ class SamePackage {
         System.out.println(obj.protectedVar);    // ✅ ok
         System.out.println(obj.defaultVar);      // ✅ ok
         // System.out.println(obj.privateVar);   // ❌ ERROR
+
+        obj.showAccess();  // ✅ ok
+
+        obj.setter(10);    // ✅ ok
+        obj.getter();      // ✅ ok
     }
 }
 
